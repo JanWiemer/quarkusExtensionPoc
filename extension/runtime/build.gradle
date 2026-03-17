@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+    id 'io.quarkus.extension'
+}
+quarkusExtension {
+    deploymentModule.set("extension-deployment")
+}
+
+description = 'ExampleApp - Runtime'
+
+dependencies {
+}

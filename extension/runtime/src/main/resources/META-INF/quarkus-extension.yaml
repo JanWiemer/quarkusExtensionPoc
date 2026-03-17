@@ -1,0 +1,10 @@
+name: "Example Extension"
+description: "Example Extension POC."
+guide: "https://quarkus.io/guides/writing-extensions"
+metadata:
+  keywords:
+    - "QUARKUS"
+    - "EXAMPLE"
+    - "EXTENSION"
+  categories:
+    - "EXAMPLE"

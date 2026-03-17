@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+description = 'ExampleApp Extension - Deployment'
+
+dependencies {
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation "io.quarkus:quarkus-core-deployment"
+    implementation 'io.quarkus:quarkus-devui-deployment'
+    implementation 'io.quarkus:quarkus-devui-deployment-spi'
+}

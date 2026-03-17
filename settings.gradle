@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        id 'io.quarkus' version "${quarkusPluginVersion}"
+        id 'io.quarkus.extension' version "${quarkusPluginVersion}"
+    }
+}
+rootProject.name = 'exampleapp'
+include 'app'
+include 'extension-deployment'
+include 'extension-runtime'
+project(':extension-deployment').projectDir = file('extension/deployment')
+project(':extension-deployment').name = 'extension-deployment'
+project(':extension-runtime').projectDir = file('extension/runtime')
+project(':extension-runtime').name = 'extension'

@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'io.quarkus'
+}
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation project(':extension')
+    implementation 'io.quarkus:quarkus-rest'
+}

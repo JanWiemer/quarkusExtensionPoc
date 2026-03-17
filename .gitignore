@@ -1,0 +1,99 @@
+###################################
+# Gradle
+/.gradle/
+
+###################################
+# Builds (directory level 1 / 2 / 3, e.g. for extensions)
+/build/
+/target/
+/out/
+/bin/
+/*/.gradle/
+/*/build/
+/*/target/
+/*/out/
+/*/bin/
+/*/*/build/
+/*/*/target/
+/*/*/out/
+/*/*/bin/
+
+###################################
+# Eclipse
+/.project
+/.classpath
+/.settings
+/.settings/**
+/*/.project
+/*/.classpath
+/*/*/.project
+/*/*/.classpath
+/*/.bin/
+/*/.temp-*classpath*.txt
+/*/maven/
+
+# keep formatting definition in GIT
+!org.eclipse.jdt.core.prefs
+!org.eclipse.core.resources.prefs
+
+###################################
+# IntelliJ
+/*/.idea
+.idea/**/*
+.profileconfig.json
+# keep formatting definitions and some settings in GIT
+!.idea/codeStyles
+!.idea/codeStyles/*
+!.idea/inspectionProfiles
+!.idea/inspectionProfiles/*
+!.idea/runConfigurations
+!.idea/runConfigurations/*
+!.idea/dictionaries
+!.idea/dictionaries/*
+!.idea/fileTemplates/
+!.idea/fileTemplates/*
+!.idea/fileTemplates/*/*
+/*/*.ipr
+/*/*.iml
+/*/*.iws
+
+###################################
+# VS-Code
+.vscode/**/*
+# keep formatting definitions and some settings in GIT
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# VisualStudioCode Patch: Ignore all local history of files
+**/.history
+
+###################################
+# Visual Studio Code
+/*/.vscode
+/*/.factorypath
+
+###################################
+# NetBeans
+/*/nb-configuration.xml
+
+###################################
+# OSX
+.DS_Store
+
+###################################
+# Vim
+*.swp
+*.swo
+
+###################################
+# patch
+*.orig
+*.rej
+
+###################################
+# Local environment
+.env
+/log/
+/*/log/
+/*/ObjectStore
