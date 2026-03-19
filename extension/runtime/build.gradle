@@ -2,6 +2,10 @@ plugins {
     id 'java'
     id 'io.quarkus.extension'
 }
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
 quarkusExtension {
     deploymentModule.set("extension-deployment")
 }
@@ -9,4 +13,6 @@ quarkusExtension {
 description = 'ExampleApp - Runtime'
 
 dependencies {
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation 'io.quarkus:quarkus-arc'
 }
