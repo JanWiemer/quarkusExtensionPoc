@@ -14,6 +14,7 @@ dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation project(':extension')
     implementation 'io.quarkus:quarkus-rest'
+    implementation "org.slf4j:slf4j-api:2.0.17"
     testImplementation "io.quarkus:quarkus-junit"
 }
 
