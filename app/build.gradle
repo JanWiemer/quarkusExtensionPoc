@@ -1,3 +1,6 @@
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
 plugins {
     id 'java'
     id 'io.quarkus'
@@ -11,4 +14,12 @@ dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation project(':extension')
     implementation 'io.quarkus:quarkus-rest'
+    testImplementation "io.quarkus:quarkus-junit"
+}
+
+tasks.withType(Test).configureEach {Test testTask ->
+    systemProperty "java.util.logging.manager", "org.jboss.logmanager.LogManager"
+    systemProperty "org.jboss.logging.provider", "jboss"
+    systemProperty "quarkus.log.console.enabled", "false"
+    //testLogging { events = [] }
 }
